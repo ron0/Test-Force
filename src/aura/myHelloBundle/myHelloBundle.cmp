@@ -1,0 +1,9 @@
+<aura:component controller="MyBRPurchaseOrderController">
+<aura:handler name="init" action="{!c.myAction}" value="{!this}" />
+<aura:attribute name="BRPurchaseOrders" type="BRPurchaseOrder__c[]" description="List of contacts" />	
+<ul>
+<aura:iteration items="{!v.BRPurchaseOrders}" var="contact">
+<li class="minli"> <h3>{!contact.Name}</h3> </li>
+</aura:iteration>
+</ul>
+</aura:component>
